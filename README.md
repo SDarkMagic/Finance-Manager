@@ -1,2 +1,2 @@
 # Finance-Manager
-A simple tool to assist in finance management. Written in Python.
+A simple CLI tool to assist in finance management. Written in Python.
