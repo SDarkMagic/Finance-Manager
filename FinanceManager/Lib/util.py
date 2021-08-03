@@ -32,3 +32,12 @@ class account:
     def getBalance(self):
         with open(self.accountFilePath, 'rt') as readBank:
             data = json.loads(readBank.read())
+
+    def addStatement(self):
+        with open(self.accountFilePath, 'rt') as readBank:
+            data = json.loads(readBank.read())
+        statements = data['history']
+        statements.append(newStatement)
+        data['history'] = statements
+        with open(self.accountFilePath, 'wt') as writeBank:
+            writeBank.write(json.dumps(data, indent=2))
