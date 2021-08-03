@@ -23,3 +23,12 @@ def checkIsInitialized():
                 return False
     else:
         return False
+
+class account:
+    def __init__(self):
+        self.accountFilePath = get_data_dir() / 'bank.json'
+        self.spendable = None
+
+    def getBalance(self):
+        with open(self.accountFilePath, 'rt') as readBank:
+            data = json.loads(readBank.read())

@@ -1,8 +1,7 @@
 import argparse
 from Lib import util
 
-with open('../README.md', 'rt') as readDesc:
-    desc = readDesc.read()
+desc = "A simple CLI tool to assist in finance management. Written in Python."
 
 parser = argparse.ArgumentParser(description=desc)
 subParsers = parser.add_subparsers(help='Available Commands')
